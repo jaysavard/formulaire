@@ -455,6 +455,7 @@ th {
   position: absolute;
   width: 1px;
 }
+
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus,
 .screen-reader-only.focusable:active,
 .screen-reader-only.focusable:focus {
@@ -486,6 +487,7 @@ body {
   font-size: 1.6rem;
   line-height: 1.375; /* facteur multiplicateur de la taille de la police 1.375x16=22 */
 }
+
 h1,
 .titreNiveau1 h2,
 .titreNiveau2,
@@ -501,6 +503,7 @@ h1,
   font-size: 2.8rem;
   margin: 0;
 }
+
 h1--desktop,
 .titreNiveau1--desktop {
   font-size: 48px;
@@ -508,6 +511,7 @@ h1--desktop,
   padding-bottom: 15px;
   position: relative;
 }
+
 h1--desktop:after,
 .titreNiveau1--desktop:after {
   background-color: #358ae0;
@@ -526,6 +530,7 @@ h2,
   font-size: 2rem;
   text-transform: uppercase;
 }
+
 h2--desktop,
 .titreNiveau2--desktop {
   font-size: 28px;
@@ -537,6 +542,7 @@ h3,
   font-size: 18px;
   font-size: 1.8rem;
 }
+
 h3--desktop,
 .titreNiveau3--desktop {
   font-size: 22px;
@@ -549,8 +555,14 @@ h3--desktop,
   font-size: 1.6rem;
   line-height: 1.375;
 }
+
 .texte--desktop {
   line-height: 1.5;
+}
+
+.sous-texte {
+  color: white;
+  size: 25px;
 }
 
 /*** Classe conteneur pour le centrage et l'affichage de la grille en arrière-plan ***/
@@ -617,13 +629,16 @@ h3--desktop,
   color: #2678B5;
   text-decoration: none;
 }
+
 .hyperlien--visited {
   color: #226aa0;
 }
+
 .hyperlien--hover {
   color: #144061;
   text-decoration: underline;
 }
+
 .hyperlien--active {
   color: #bbd531;
   text-decoration: underline;
@@ -641,27 +656,247 @@ h3--desktop,
   padding: 0.5em 1em;
   text-decoration: none;
 }
+
 .bouton:after {
   content: "»";
   margin-left: 0.4em;
 }
+
 .bouton--hover {
   background-color: rgba(187, 213, 49, 0.75);
 }
+
 .bouton--active {
   background-color: rgba(187, 213, 49, 0.5);
 }
+
 .bouton--inverse {
   background-color: white;
   border: 2px solid #bbd531;
 }
+
 .bouton--inverse--hover {
   border-color: rgba(187, 213, 49, 0.75);
 }
+
 .bouton--inverse--active {
   border-color: rgba(187, 213, 49, 0.5);
 }
 
 /****** MODULES ******/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: linear-gradient(to right, #393E41 0%, #393E41 50%, white 50%, white 100%);
+}
+
+@media (max-width: 600px) {
+  body {
+    background-image: linear-gradient(to bottom, #393E41 0%, #393E41 30%, white 40%, white 100%);
+  }
+}
+.form {
+  margin-left: 50%;
+}
+
+@media screen and (max-width: 600px) {
+  .form {
+    margin-left: 0;
+  }
+}
+.sous-texte {
+  display: flex;
+  justify-content: left;
+}
+
+.background_header {
+  width: 50%;
+  float: left;
+}
+
+@media screen and (max-width: 600px) {
+  .background_header {
+    width: 100%;
+  }
+}
+.choisir_don-bouton {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+}
+
+.fs-title1 {
+  padding-bottom: 2%;
+}
+
+.fs-title2 {
+  padding-bottom: 5%;
+}
+
+.fs-title3 {
+  padding-bottom: 2%;
+}
+
+.header {
+  margin-left: 5%;
+}
+
+.progress-bar_container {
+  display: flex;
+  justify-content: center;
+}
+
+.progressbar {
+  color: white;
+  margin: 2rem;
+}
+
+@media screen and (max-width: 600px) {
+  .progressbar {
+    display: flex;
+    flex-direction: row;
+  }
+}
+.progressbar li img {
+  max-width: 30px;
+}
+
+.progressbar-element {
+  margin: 2rem;
+  list-style-type: none;
+}
+
+@media screen and (max-width: 600px) {
+  .textEtape {
+    display: none;
+  }
+}
+.large-input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.small-input {
+  width: 100px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+.confirmation-carte {
+  display: flex;
+  flex-direction: row;
+}
+
+.confirmation-carte_individuel {
+  display: flex;
+  flex-direction: column;
+  margin-right: 16%;
+}
+
+.payment-methods {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.payment-button {
+  color: #000;
+  margin: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  border-bottom: 2px solid transparent;
+}
+
+.payment-button:hover {
+  background-color: #aaa;
+}
+
+.payment-button.clicked {
+  background-color: #000;
+  color: #00a63f;
+  border-bottom: 2px solid #00a63f;
+}
+
+#interacTransferBtn {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.cartes-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.carte-image {
+  margin-left: 2%;
+  max-width: 50%;
+}
+
+.bouton-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+}
+
+.precedent {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: #393E41;
+  border-color: white;
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .precedent {
+    display: none;
+  }
+}
+.precedent_small {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 100px;
+  padding-left: 100px;
+  background-color: #393E41;
+  border-color: white;
+  color: white;
+}
+
+@media screen and (min-width: 600px) {
+  .precedent_small {
+    display: none;
+  }
+}
+.suivant {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  padding-right: 100px;
+  padding-left: 100px;
+}
+
+.hidden {
+  display: none;
+}
+
+
 
 /*# sourceMappingURL=styles.css.map */

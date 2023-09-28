@@ -2,45 +2,164 @@
 <html lang="fr">
 
 <head>
-  <meta charset="utf-8" />
-  <title>HTML5 - Structure sémantique</title>
+	<meta charset="utf-8" />
+	<meta name="description" content="Donnez généreusement à notre organisme sans but lucratif" />
+	<meta name="keywords" content="dons, donnez, générosité" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link rel="icon" href="../images/10x/favicon.png" type="image/x-icon">
+
+	<title>Pearception</title>
 	<link rel="stylesheet" href="../public/liaisons/css/styles.css">
+	<script defer src="../../formulaire.js"></script>
 </head>
 
 <body>
-
-<div class="background_header" style="background-color: black">
-	<header>
-		<img src="../images/logo_poire.png" style="max-width:100%">
+<main>
+<section class="section1">
+<div class="background_header">
+	<header class="header">
+		<img src="../images/logo_poire.png" alt="Logo Pearception" style="max-width:50%">
 	 <h1 class="titreH1" style="color: white">Type de don</h1>
+		<p class="sous-texte"><cite>Vous voulez avoir un impact sur le monde? Changer la planète pour le mieux n’est pas
+			un accomplissement facile. Mais plus nous sommes de fous, plus le défi semble possible.</cite></p>
 		<div class="progress-bar">
 			<div class="progress" style="width: 33%;"></div>
 		</div>
-
-		<div class="step">Étape 1</div>
-		<div class="step">Étape 2</div>
-		<div class="step">Étape 3</div>
 	</header>
-</div>
 
-	<main>
-			<section>
-				<h3>Entete de section</h3>
-				<article>
-						<h4>Entete d'article</h4>
-					<p>Lorem ipsum dolor HTML5 nunc aut nunquam sit amet, consectetur adipiscing elit. Vivamus at est eros, vel fringilla urna.</p>
-				</article>
-				<article>
-					<h4>Entete d'article</h4>
-					<p>Lorem ipsum dolor HTML5 nunc aut nunquam sit amet, consectetur adipiscing elit. Vivamus at est eros, vel fringilla urna.</p>
-				</article>
-			</section>
+
+		<!-- progressbar -->
+		<div class="progress-bar_container">
+			<ul class="progressbar" id="progressbar">
+				<li class="progressbar-element"> <img id="stepEtape1" src="../images/10x/1-vide.png" alt="1"><span class="textEtape">Type de don</span></li>
+				<li class="progressbar-element"><img id="stepEtape2" src="../images/10x/2-vide.png" alt="1"><span class="textEtape">Informations personnelles</span></li>
+				<li class="progressbar-element"><img id="stepEtape3" src="../images/10x/3-vide.png" alt="1"><span class="textEtape">Paiement</span></li>
+				<li class="progressbar-element"><img id="stepEtape4" src="../images/10x/4-vide.png" alt="1"><span class="textEtape">Confirmation</span></li>
+			</ul>
+		</div>
+		<div class="bouton-container">
+			<input id="boutonPrecedent_gros1" type="button" name="previous" class="precedent action-button-previous hidden" value="Précédent"/>
+			<input id="boutonPrecedent_gros2" type="button" name="previous" class="precedent action-button-previous hidden" value="Précédent"/>
+			<input id="boutonPrecedent_gros3" type="button" name="previous" class="precedent action-button-previous hidden" value="Précédent"/>
+
+		</div>
+</div>
+</section>
+<section class="section2">
+		<form class="form" novalidate>
+			<!-- fieldsets -->
+			<fieldset id="premiereSection">
+				<h2 class="fs-title1">Choisissez votre type de don</h2>
+				<button id="suivant1" class="choisir_don-bouton" type="button" name="dUnique">
+					<img class="don_image" src="../images/cadeau.svg" alt="Don Unique">
+					<span>Don unique</span>
+				</button>
+				<button id="suivant2" class="choisir_don-bouton" type="button" name="dReccurent">
+					<img class="don_image" src="../images/coeur.svg" alt="Don Recurrent">
+					<span>Don Récurrent</span>
+				</button>
+				<button id="suivant3" class="choisir_don-bouton" type="button" name="dSpecial">
+					<img class="don_image" src="../images/special.svg" alt="Don Special">
+					<span>Don Spécial</span>
+				</button>
+			</fieldset>
+			<fieldset id="deuxiemeSection" class="deuxiemeSection hidden">
+				<h2 class="fs-title2">Qui êtes-vous?</h2>
+
+				<label for="nom">Nom complet</label>
+				<br>
+				<input class="large-input" type="text" id="nom" name="nom" pattern="/^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/" required>
+				<span id="erreurNomComplet" class="erreurNomComplet"></span>
+				<br>
+				<br>
+				<br>
+
+				<label for="telephone">Numéro de téléphone :</label>
+				<br>
+				<input class="large-input" type="tel" id="telephone" name="telephone" pattern="/^[0-9]{10}$/" required>
+				<span class="erreurNumTel"></span>
+				<br>
+				<br>
+				<br>
+
+				<label for="date_naissance">Date de naissance :</label>
+				<br>
+				<input class="large-input" type="date" id="date_naissance" name="date_naissance" pattern="/^(19|20)\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])$/" required>
+				<span class="erreurDateNaissance"></span>
+				<br>
+				<br>
+				<br>
+
+				<label for="email">Adresse courriel :</label>
+				<br>
+				<input class="large-input" type="email" id="email" name="email" pattern="/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/" required>
+				<span class="erreurMail"></span>
+				<br>
+				<br>
+				<br>
+				<input id="suivant4" type="button" name="next" class="suivant action-button" value="Suivant"/>
+				<div class="bouton-container">
+					<input id="precedent1" type="submit" name="previous" class="precedent_small action-button-previous" value="Précédent"/>
+				</div>
+			</fieldset>
+
+			<fieldset id="troisiemeSection" class="troisiemeSection hidden">
+				<h2 class="fs-title3">Dernière étape</h2>
+				<div class="payment-methods">
+					<button class="payment-button" id="creditCardBtn">Carte de crédit</button>
+					<button class="payment-button" id="debitCardBtn">Carte de débit</button>
+				</div>
+				<div>
+					<button class="payment-button" id="interacTransferBtn">Virement interact</button>
+				</div>
+
+				<div class="cartes-images">
+					<img class="carte-image" src="../images/mastercard.png" alt="mastercard">
+					<img class="carte-image" src="../images/visa.png" alt="visa">
+					<img class="carte-image" src="../images/amex.png" alt="american express">
+				</div>
+
+				<label for="nom">Nom complet</label>
+				<br>
+				<input class="large-input" type="text" id="nomCarte" name="nom" pattern="/^[A-Za-zÀ-ÖØ-öø-ÿ\s'-]+$/" required>
+				<span class="erreurNomCarte"></span>
+				<br>
+				<br>
+				<br>
+
+				<label for="carte">Numéro de carte</label>
+				<br>
+				<input class="large-input" type="number" id="carte" name="carte" minlength="19" maxlength="19" required>
+				<span class="erreurNumCarte"></span>
+				<br>
+				<br>
+				<br>
+					<div class="confirmation-carte">
+						<div class="confirmation-carte_individuel">
+							<label for="expiration">Expiration</label>
+							<input class="small-input" type="number" id="expiration" name="expiration" pattern="/^(0[1-9]|1[0-2])\/?([0-9]{4}|[0-9]{2})$/" required>
+							<span class="erreurExpiration"></span>
+						</div>
+						<div class="confirmation-carte_individuel">
+							<label for="ccv">CCV</label>
+							<input class="small-input" type="number" id="ccv" name="ccv" pattern="/^[0-9]{3,4}$/" required>
+							<span class="erreurCcv"></span>
+						</div>
+					</div>
+
+				<input id="suivant5" type="button" name="next" class="suivant action-button" value="Suivant"/>
+				<div class="bouton-container">
+					<input id="precedent2" type="button" name="previous" class="precedent_small action-button-previous" value="Précédent"/>
+				</div>
+			</fieldset>
+			<fieldset id="quatriemeSection" class="quatriemeSection hidden">
+				<h2 class="fs-title1">Merci beaucoup! Votre don ira vers une bonne cause</h2>
+
+			</fieldset>
+		</form>
+</section>
 	</main>
-	
-	<footer>
-		<h3>Pied de page</h3>
-		<p>Lorem ipsum dolor nunc aut nunquam sit amet, consectetur adipiscing elit. Vivamus at est eros, vel fringilla urna. Pellentesque odio rhoncus</p>
-	</footer>
+
 </body>
 
 </html>
