@@ -37,20 +37,20 @@ boutonUnique.addEventListener('click', () => {
     fieldset2.classList.remove('hidden');
     fieldset1.classList.add('hidden');
     btnPrecedentGros1.classList.remove('hidden');
-    stepEtape1.src = '../images/10x/1-plein.png';
+    stepEtape1.src = 'images/10x/1-plein.png';
 });
 boutonReccurent.addEventListener('click', () => {
     fieldset2.classList.remove('hidden');
     fieldset1.classList.add('hidden');
     btnPrecedentGros1.classList.remove('hidden');
-    stepEtape1.src = '../images/10x/1-plein.png';
+    stepEtape1.src = 'images/10x/1-plein.png';
 
 });
 boutonSpecial.addEventListener('click', () => {
     fieldset2.classList.remove('hidden');
     fieldset1.classList.add('hidden');
     btnPrecedentGros1.classList.remove('hidden');
-    stepEtape1.src = '../images/10x/1-plein.png';
+    stepEtape1.src = 'images/10x/1-plein.png';
 
 });
 premierBoutonSuivant.addEventListener('click', () => {
@@ -58,7 +58,7 @@ premierBoutonSuivant.addEventListener('click', () => {
     fieldset2.classList.add('hidden');
     btnPrecedentGros2.classList.remove('hidden');
     btnPrecedentGros1.classList.add('hidden');
-    stepEtape2.src = '../images/10x/2-plein.png';
+    stepEtape2.src = 'images/10x/2-plein.png';
 
 });
 deuxiemeBoutonSuivant.addEventListener('click', () => {
@@ -66,26 +66,26 @@ deuxiemeBoutonSuivant.addEventListener('click', () => {
     fieldset3.classList.add('hidden');
     btnPrecedentGros3.classList.remove('hidden');
     btnPrecedentGros2.classList.add('hidden');
-    stepEtape3.src = '../images/10x/3-plein.png';
-    stepEtape4.src = '../images/10x/4-plein.png';
+    stepEtape3.src = 'images/10x/3-plein.png';
+    stepEtape4.src = 'images/10x/4-plein.png';
 
 });
 btnPrecedent1.addEventListener('click', ()=>{
     fieldset1.classList.remove('hidden');
     fieldset2.classList.add('hidden');
-    stepEtape1.src = '../images/10x/1-vide.png';
+    stepEtape1.src = 'images/10x/1-vide.png';
 })
 btnPrecedent2.addEventListener('click', ()=>{
     fieldset2.classList.remove('hidden');
     fieldset3.classList.add('hidden');
-    stepEtape2.src = '../images/10x/2-vide.png';
+    stepEtape2.src = 'images/10x/2-vide.png';
 
 })
 btnPrecedentGros1.addEventListener('click', ()=>{
     fieldset1.classList.remove('hidden');
     fieldset2.classList.add('hidden');
     btnPrecedentGros1.classList.add('hidden');
-    stepEtape1.src = '../images/10x/1-vide.png';
+    stepEtape1.src = 'images/10x/1-vide.png';
 
 })
 btnPrecedentGros2.addEventListener('click', ()=>{
@@ -93,7 +93,7 @@ btnPrecedentGros2.addEventListener('click', ()=>{
     fieldset3.classList.add('hidden');
     btnPrecedentGros2.classList.add('hidden');
     btnPrecedentGros1.classList.remove('hidden');
-    stepEtape2.src = '../images/10x/2-vide.png';
+    stepEtape2.src = 'images/10x/2-vide.png';
 
 })
 btnPrecedentGros3.addEventListener('click', ()=>{
@@ -101,8 +101,8 @@ btnPrecedentGros3.addEventListener('click', ()=>{
     fieldset4.classList.add('hidden');
     btnPrecedentGros3.classList.add('hidden');
     btnPrecedentGros2.classList.remove('hidden');
-    stepEtape3.src = '../images/10x/3-vide.png';
-    stepEtape4.src = '../images/10x/4-vide.png';
+    stepEtape3.src = 'images/10x/3-vide.png';
+    stepEtape4.src = 'images/10x/4-vide.png';
 
 
 })
